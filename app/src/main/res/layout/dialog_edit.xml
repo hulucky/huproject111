@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/x280"
+    android:layout_height="@dimen/x100"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:paddingTop="@dimen/x10"
+    android:focusable="true"
+    >
+    <com.xzkydz.conveyors.view.InputEditText
+        android:id="@+id/dialog_input"
+        android:layout_width="@dimen/x60"
+        android:layout_height="@dimen/x20"
+        android:gravity="center"
+        android:focusable="true"
+        android:clickable="true"
+        android:inputType="numberDecimal"
+        android:layout_marginLeft="@dimen/spacing_normal"
+        android:text="20"
+        android:background="@drawable/bg_selector_edittext"
+        />
+
+</LinearLayout>

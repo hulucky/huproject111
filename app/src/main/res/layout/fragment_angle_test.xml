@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:orientation="horizontal">
+
+        <com.sensor.view.SensorView
+            android:id="@+id/sv_speed"
+            android:layout_width="@dimen/item_offset_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:visibility="invisible"
+            app:CheckConnect="true"
+            app:CheckTime="3000"
+            app:DrawModel="variable"
+            app:SensorType="SU_DU_TWO"
+            app:SensorViewPadding="@dimen/item_offset_10dp" />
+
+        <com.sensor.view.SensorView
+            android:id="@+id/sv_angle"
+            android:layout_width="@dimen/item_offset_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            app:CheckConnect="true"
+            app:CheckTime="3000"
+            app:DrawModel="variable"
+            app:SensorType="QING_JIAO"
+            app:SensorViewPadding="@dimen/item_offset_10dp" />
+
+        <com.sensor.view.SensorView
+            android:id="@+id/sv_wenshidu"
+            android:layout_width="@dimen/item_offset_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:visibility="invisible"
+            app:CheckConnect="true"
+            app:CheckTime="3000"
+            app:DrawModel="variable"
+            app:SensorType="WEN_SHI_DAQIYA"
+            app:SensorViewPadding="@dimen/item_offset_10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#082045"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/spacing_normal"
+        android:paddingLeft="@dimen/spacing_normal"
+        android:paddingRight="0dp"
+        android:paddingTop="@dimen/spacing_normal">
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_show_test_data">
+
+            <FrameLayout
+                android:id="@+id/frameLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+            <FrameLayout
+                android:id="@+id/frameLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+            <LinearLayout
+                android:id="@+id/linear_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frameLayout1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/item_offset_15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="时间："
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/item_offset_4dp"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_time"
+                android:layout_marginTop="@dimen/item_offset_15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/item_offset_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:shadowColor="#fefdfdfd"
+                    android:shadowRadius="1.0"
+                    android:singleLine="true"
+                    android:text="运行角度:"
+                    android:textColor="#031a03"
+                    android:textSize="@dimen/item_offset_17sp" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/item_offset_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_yunxing_jiaodu"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/shape_whiteback"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/item_offset_17sp" />
+
+                    <TextView
+                        android:layout_width="@dimen/item_offset_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:singleLine="true"
+                        android:text=" °"
+                        android:textSize="@dimen/item_offset_17sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/item_offset_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:shadowColor="#fefdfdfd"
+                    android:shadowRadius="1.0"
+                    android:singleLine="true"
+                    android:text="最大角度:"
+                    android:textColor="#031a03"
+                    android:textSize="@dimen/item_offset_17sp" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/item_offset_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_zuida_angle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/shape_whiteback"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/item_offset_17sp" />
+
+                    <TextView
+                        android:layout_width="@dimen/item_offset_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:singleLine="true"
+                        android:text=" °"
+                        android:textSize="@dimen/item_offset_17sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/item_offset_14dp">
+
+            <TextView
+                android:layout_width="@dimen/item_offset_70dp"
+                android:layout_height="@dimen/item_offset_40dp"
+                android:background="@mipmap/rightbar_btn_bg"
+                android:gravity="center"
+                android:text="测试图"
+                android:textSize="@dimen/item_offset_14sp" />
+
+            <TextView
+                android:id="@+id/btn_save"
+                android:layout_width="@dimen/item_offset_70dp"
+                android:layout_height="@dimen/item_offset_40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:background="@mipmap/icon_btn_save_normal"
+                android:gravity="center"
+                android:text="保存"
+                android:textSize="@dimen/item_offset_14sp" />
+
+
+            <TextView
+                android:id="@+id/btn_start"
+                android:layout_width="@dimen/item_offset_70dp"
+                android:layout_height="@dimen/item_offset_40dp"
+                android:layout_above="@+id/btn_save"
+                android:background="@mipmap/icon_btn_save_normal"
+                android:gravity="center"
+                android:text="开始"
+                android:textSize="@dimen/item_offset_14sp" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

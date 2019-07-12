@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:orientation="horizontal">
+
+        <com.sensor.view.SensorView
+            android:id="@+id/sv_time1"
+            android:layout_width="@dimen/item_offset_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            app:CheckConnect="true"
+            app:CheckTime="3000"
+            app:DrawModel="variable"
+            app:SensorType="JI_SHI_QI_A"
+            app:SensorViewPadding="@dimen/item_offset_10dp" />
+
+        <com.sensor.view.SensorView
+            android:id="@+id/sv_time2"
+            android:layout_width="@dimen/item_offset_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            app:CheckConnect="true"
+            app:CheckTime="3000"
+            app:DrawModel="variable"
+            app:SensorType="JI_SHI_QI_A"
+            app:SensorViewPadding="@dimen/item_offset_10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#082045"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/spacing_normal"
+        android:paddingLeft="@dimen/spacing_normal"
+        android:paddingTop="@dimen/spacing_normal">
+
+        <RelativeLayout
+            android:id="@+id/fl_data"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_shape_chart">
+
+            <LinearLayout
+                android:id="@+id/linear_view"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/item_offset_15dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/item_offset_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="时间1:" />
+
+                <TextView
+                    android:id="@+id/tv_time1"
+                    android:layout_width="@dimen/item_offset_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="@dimen/item_offset_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="时间2:" />
+
+                <TextView
+                    android:id="@+id/tv_time2"
+                    android:layout_width="@dimen/item_offset_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="@dimen/item_offset_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="空动时间:" />
+
+                <TextView
+                    android:id="@+id/tv_kdtime"
+                    android:layout_width="@dimen/item_offset_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/lineup"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/linear_view"
+                android:layout_marginTop="@dimen/item_offset_20dp"
+                android:background="#000" />
+
+            <LinearLayout
+                android:id="@+id/ll_tittle_name"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/lineup"
+                android:divider="@drawable/divider2"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <TextView
+                    android:id="@+id/item0"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="条目"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/item1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="时间1"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/item2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="时间2"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/item3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="空行程时间"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/item4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="删除"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/ll_tittle_name"
+                android:background="#000" />
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/line" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/item_offset_14dp">
+
+            <TextView
+                android:id="@+id/tv_kongtime"
+                android:layout_width="@dimen/item_offset_70dp"
+                android:layout_height="@dimen/item_offset_40dp"
+                android:background="@mipmap/rightbar_btn_bg"
+                android:gravity="center"
+                android:text="空行程时间"
+                android:textSize="@dimen/item_offset_13sp" />
+
+
+            <TextView
+                android:id="@+id/tv_save"
+                android:layout_width="@dimen/item_offset_70dp"
+                android:layout_height="@dimen/item_offset_40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:background="@mipmap/icon_btn_save_normal"
+                android:gravity="center"
+                android:text="保存"
+                android:textSize="@dimen/item_offset_14sp" />
+
+            <TextView
+                android:id="@+id/tv_start"
+                android:layout_width="@dimen/item_offset_70dp"
+                android:layout_height="@dimen/item_offset_40dp"
+                android:layout_above="@+id/tv_save"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:background="@mipmap/icon_btn_save_normal"
+                android:gravity="center"
+                android:text="开始"
+                android:textSize="@dimen/item_offset_14sp" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

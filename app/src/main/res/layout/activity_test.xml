@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar" />
+
+    <com.sensor.view.SensorView
+        android:id="@+id/sv_wsd"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:CheckConnect="true"
+        app:CheckTime="3000"
+        app:DrawModel="variable"
+        app:SensorType="WEN_SHI_DAQIYA"
+        />
+
+    <com.xzkydz.function.view.CustomViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_offset_60dp"
+        android:background="@color/orange_my"
+        app:tl_indicator_corner_radius="@dimen/item_offset_1dp"
+        app:tl_indicator_height="@dimen/item_offset_3dp"
+        app:tl_indicator_width="@dimen/item_offset_50dp"
+        app:tl_tab_space_equal="true"
+        app:tl_textSelectColor="@color/white"
+        app:tl_textUnselectColor="@color/white"
+        app:tl_textsize="@dimen/text_body_16sp" />
+
+</LinearLayout>

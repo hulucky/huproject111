@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c1d8fd"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linear_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#c1d8fd"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/speed_fl_chart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_offset_5dp">
+
+            <FrameLayout
+                android:id="@+id/frameLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="300dp"
+                android:background="#ffffff">
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frameLayout2"
+                android:layout_width="fill_parent"
+                android:layout_height="300dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/frameLayout1" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="1dp"
+                android:layout_height="280dp"
+                android:background="@color/red"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="1dp"
+                android:layout_height="280dp"
+                android:background="@color/red"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/item_offset_15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/item_offset_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:shadowColor="#fefdfdfd"
+                    android:shadowRadius="1.0"
+                    android:singleLine="true"
+                    android:text="平均减速度："
+                    android:textColor="#031a03"
+                    android:textSize="@dimen/item_offset_17sp" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/item_offset_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_average_jianspeed"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/shape_whiteback"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/item_offset_17sp" />
+
+                    <TextView
+                        android:layout_width="@dimen/item_offset_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:singleLine="true"
+                        android:text="m/s²"
+                        android:textSize="@dimen/item_offset_17sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/item_offset_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:shadowColor="#fefdfdfd"
+                    android:shadowRadius="1.0"
+                    android:singleLine="true"
+                    android:text="减速时间："
+                    android:textColor="#031a03"
+                    android:textSize="@dimen/item_offset_17sp" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/item_offset_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_jiansu_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/shape_whiteback"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/item_offset_17sp" />
+
+                    <TextView
+                        android:layout_width="@dimen/item_offset_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:singleLine="true"
+                        android:text="s"
+                        android:textSize="@dimen/item_offset_17sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/item_offset_15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/item_offset_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:shadowColor="#fefdfdfd"
+                    android:shadowRadius="1.0"
+                    android:singleLine="true"
+                    android:text="初速度："
+                    android:textColor="#031a03"
+                    android:textSize="@dimen/item_offset_17sp" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/item_offset_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_chusudu"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/shape_whiteback"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/item_offset_17sp" />
+
+                    <TextView
+                        android:layout_width="@dimen/item_offset_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:singleLine="true"
+                        android:text="m/s"
+                        android:textSize="@dimen/item_offset_17sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/item_offset_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:shadowColor="#fefdfdfd"
+                    android:shadowRadius="1.0"
+                    android:singleLine="true"
+                    android:text="末速度："
+                    android:textColor="#031a03"
+                    android:textSize="@dimen/item_offset_17sp" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/item_offset_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_mosudu"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/shape_whiteback"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/item_offset_17sp" />
+
+                    <TextView
+                        android:layout_width="@dimen/item_offset_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:singleLine="true"
+                        android:text="m/s"
+                        android:textSize="@dimen/item_offset_17sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_offset_15dp"
+                android:layout_marginTop="@dimen/item_offset_15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/item_offset_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:shadowColor="#fefdfdfd"
+                    android:shadowRadius="1.0"
+                    android:singleLine="true"
+                    android:text="最大速度："
+                    android:textColor="#031a03"
+                    android:textSize="@dimen/item_offset_17sp" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/item_offset_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_max_speed"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/shape_whiteback"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/item_offset_17sp" />
+
+                    <TextView
+                        android:layout_width="@dimen/item_offset_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:singleLine="true"
+                        android:text="m/s"
+                        android:textSize="@dimen/item_offset_17sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/item_offset_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:shadowColor="#fefdfdfd"
+                    android:shadowRadius="1.0"
+                    android:singleLine="true"
+                    android:text="最小速度："
+                    android:textColor="#031a03"
+                    android:textSize="@dimen/item_offset_17sp" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/item_offset_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_min_speed"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/shape_whiteback"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/item_offset_17sp" />
+
+                    <TextView
+                        android:layout_width="@dimen/item_offset_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:singleLine="true"
+                        android:text="m/s"
+                        android:textSize="@dimen/item_offset_17sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

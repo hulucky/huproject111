@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_ceshi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="制动测试界面"
+        android:textSize="@dimen/item_offset_20sp" />
+
+    <LinearLayout
+        android:id="@+id/linear_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/item_offset_30dp"
+            android:background="@color/white">
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/item_offset_50dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioBtn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="空载制动"
+                    android:textSize="@dimen/item_offset_24sp" />
+
+                <RadioButton
+                    android:id="@+id/radioBtn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_offset_15dp"
+                    android:text="重载制动"
+                    android:textSize="@dimen/item_offset_24sp" />
+
+                <RadioButton
+                    android:id="@+id/radioBtn3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_offset_15dp"
+                    android:text="空行程时间"
+                    android:textSize="@dimen/item_offset_24sp" />
+
+                <RadioButton
+                    android:id="@+id/radioBtn4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_offset_15dp"
+                    android:text="制动力测试"
+                    android:textSize="@dimen/item_offset_24sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_sure"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/item_offset_20dp"
+                android:layout_marginLeft="@dimen/item_offset_20dp"
+                android:layout_marginRight="@dimen/item_offset_20dp"
+                android:background="@drawable/shape_kaishi"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

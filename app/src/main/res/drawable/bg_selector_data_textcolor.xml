@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--DataDetailActivity  Radiobutton 的文字颜色-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:color="@color/color_text_checked_gb"></item>
+    <item android:state_selected="false" android:color="@color/color_radiobutton"></item>
+    <item android:state_pressed="true" android:color="@color/color_text_checked_gb"></item>
+    <item android:state_checked="false" android:color="@color/color_radiobutton"></item>
+</selector>

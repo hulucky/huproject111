@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_data_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_data_detail">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000" />
+
+    <!--radioGroup-->
+    <LinearLayout
+        android:id="@+id/ll_choose"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="1dp"
+        android:background="#c7c4bb"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/rg_one"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rb_0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:checked="true"
+                android:drawableLeft="@drawable/icon_checkbox"
+                android:drawablePadding="5dp"
+                android:text="速度与角度"
+                android:textColor="@drawable/bg_selector_data_textcolor"
+                android:textSize="17sp" />
+
+            <RadioButton
+                android:id="@+id/rb_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/icon_checkbox"
+                android:drawablePadding="5dp"
+                android:text="速度"
+                android:textColor="@drawable/bg_selector_data_textcolor"
+                android:textSize="17sp" />
+
+            <RadioButton
+                android:id="@+id/rb_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/icon_checkbox"
+                android:drawablePadding="5dp"
+                android:text="角度"
+                android:textColor="@drawable/bg_selector_data_textcolor"
+                android:textSize="17sp" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/rg_two"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rb_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/icon_checkbox"
+                android:drawablePadding="5dp"
+                android:text="空动时间"
+                android:textColor="@drawable/bg_selector_data_textcolor"
+                android:textSize="17sp" />
+
+            <RadioButton
+                android:id="@+id/rb_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/icon_checkbox"
+                android:drawablePadding="5dp"
+                android:text="满载向下"
+                android:textColor="@drawable/bg_selector_data_textcolor"
+                android:textSize="17sp" />
+
+            <RadioButton
+                android:id="@+id/rb_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/icon_checkbox"
+                android:drawablePadding="5dp"
+                android:text="空载向上"
+                android:textColor="@drawable/bg_selector_data_textcolor"
+                android:textSize="17sp" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/rg_three"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rb_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/icon_checkbox"
+                android:drawablePadding="5dp"
+                android:text="牵引力"
+                android:textColor="@drawable/bg_selector_data_textcolor"
+                android:textSize="17sp" />
+
+            <RadioButton
+                android:id="@+id/rb_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/icon_checkbox"
+                android:drawablePadding="5dp"
+                android:text="制动力"
+                android:textColor="@drawable/bg_selector_data_textcolor"
+                android:textSize="17sp" />
+
+            <RadioButton
+                android:id="@+id/rb_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/icon_checkbox"
+                android:drawablePadding="5dp"
+                android:text="回绳轮"
+                android:textColor="@drawable/bg_selector_data_textcolor"
+                android:textSize="17sp" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ll_tittle"
+        android:background="#000" />
+
+    <!--fragment要填充的界面-->
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_tittle"
+        android:layout_marginTop="10dp" />
+
+    <!--spinner和checkbox所在的那一行-->
+    <LinearLayout
+        android:id="@+id/ll_tittle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ll_choose"
+        android:background="@drawable/bg_data_tittle_gd"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="选择测试数据："
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <Spinner
+            android:id="@+id/sp_choose_data"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="#2a31ea" />
+
+        <CheckBox
+            android:id="@+id/cb_join_sport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="@dimen/x1"
+            android:text="选中本项导入报告或删除" />
+    </LinearLayout>
+
+</RelativeLayout>

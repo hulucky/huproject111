@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--测试图-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        >
+
+        <RelativeLayout
+            android:id="@+id/ll_chart"
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="@dimen/item_offset_5dp"
+            android:layout_marginRight="@dimen/item_offset_5dp"
+            android:background="@drawable/bg_shape_chart1">
+
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/ll_zdl"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                    <!--style="@style/TextView_laber_inf"-->
+                    <!--android:text="制动力"-->
+                    <!--android:layout_width="110dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:paddingRight="@dimen/item_offset_5dp"-->
+                    <!--/>-->
+                <!--<TextView-->
+                    <!--style="@style/TextView_laber_inf"-->
+                    <!--android:text=":"/>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_zdl"-->
+                    <!--style="@style/TextView_laber_inf"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:text="0"-->
+                    <!--/>-->
+
+                <!--<TextView-->
+                    <!--style="@style/TextView_laber_inf"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:text="KN"-->
+                    <!--/>-->
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/ll_zuida_zdl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_zdl"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextView_laber_inf"
+                    android:text="最大制动力"
+                    android:layout_width="110dp"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/item_offset_5dp"
+                    />
+
+                <TextView
+                    style="@style/TextView_laber_inf"
+                    android:text=":"/>
+                <TextView
+                    android:id="@+id/tv_zuida_zdl"
+                    style="@style/TextView_laber_inf"
+                    android:layout_marginLeft="10dp"
+                    android:text="0" />
+
+                <TextView
+                    style="@style/TextView_laber_inf"
+                    android:layout_marginLeft="10dp"
+                    android:text="KN" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_zong_zdl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_zuida_zdl"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextView_laber_inf"
+                    android:text="总制动力"
+                    android:layout_width="110dp"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/item_offset_5dp"
+                    />
+
+                <TextView
+                    style="@style/TextView_laber_inf"
+                    android:text=":"/>
+                <TextView
+                    android:id="@+id/tv_zong_zdl"
+                    style="@style/TextView_laber_inf"
+                    android:layout_marginLeft="10dp"
+                    android:text="0" />
+
+                <TextView
+                    style="@style/TextView_laber_inf"
+                    android:layout_marginLeft="10dp"
+                    android:text="KN" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_bizhi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_zong_zdl"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_chazhi0"
+                    style="@style/TextView_laber_inf"
+                    android:text="比值"
+                    android:layout_width="110dp"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/item_offset_5dp"
+                    />
+                <TextView
+                    style="@style/TextView_laber_inf"
+                    android:text=":"/>
+                <TextView
+                    android:id="@+id/tv_bizhi"
+                    style="@style/TextView_laber_inf"
+                    android:layout_marginLeft="10dp"
+                    android:text="0" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fl_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ll_chart"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="@dimen/item_offset_5dp"
+            android:layout_marginRight="@dimen/item_offset_5dp"
+            android:layout_marginBottom="@dimen/item_offset_5dp"
+            android:background="@drawable/bg_shape_chart"
+            >
+
+            <LinearLayout
+                android:id="@+id/ll_tittle_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x20"
+                android:divider="@drawable/divider2"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <TextView
+                    android:id="@+id/item0"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="条目"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/item1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="制动力 KN"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/item2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="测试时间"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/item3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="删除"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/ll_tittle_name"
+                android:background="#000" />
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/line"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

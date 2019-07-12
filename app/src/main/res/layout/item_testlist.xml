@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/item_offset_70dp"
+    android:layout_height="@dimen/item_offset_46dp"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/text_body_16sp"
+        android:gravity="center"
+        android:background="@mipmap/icon_btn_save_normal"
+        android:textColor="@color/white"
+        android:text="速度测试"/>
+</LinearLayout>

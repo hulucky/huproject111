@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.CreateTaskActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="380dp">
+        <!--scroll,未添加此标签，所以CollapsingToolbarLayout不能滚动-->
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:collapsedTitleGravity="left"
+            app:contentScrim="@color/orange_my"
+            app:expandedTitleGravity="left|top"
+            app:expandedTitleTextAppearance="@style/CollapsingToolbarLayout_Title"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|enterAlwaysCollapsed">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/rwxx_top_bg"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00ffffff"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/item_offset_80dp"
+                android:paddingRight="@dimen/item_offset_80dp"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="任务信息"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="@dimen/item_offset_15dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/et_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:hint="受检单位名称"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:maxLength="20"
+                            android:textColor="#0a0b35"
+                            android:textColorHint="#cce3fc"
+                            android:theme="@style/EditTextTheme" />
+
+                        <ImageView
+                            android:id="@+id/iv_delete_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/item_offset_5dp"
+                            android:src="@mipmap/vector_drawable_clear"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/item_offset_4dp"
+                            android:text="输入受检单位名称"
+                            android:textSize="@dimen/item_offset_12sp" />
+
+                        <TextView
+                            android:id="@+id/tv1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/item_offset_5dp"
+                            android:text="0/20"
+                            android:textSize="@dimen/item_offset_12sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/et_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:hint="单轨吊编号"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:maxLength="20"
+                            android:textColor="#0a0b35"
+                            android:textColorHint="#cce3fc"
+                            android:theme="@style/EditTextTheme" />
+
+                        <ImageView
+                            android:id="@+id/iv_delete_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/item_offset_5dp"
+                            android:src="@mipmap/vector_drawable_clear"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/item_offset_4dp"
+                            android:text="输入单轨吊编号"
+                            android:textSize="@dimen/item_offset_12sp" />
+
+                        <TextView
+                            android:id="@+id/tv2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/item_offset_5dp"
+                            android:text="0/20"
+                            android:textSize="@dimen/item_offset_12sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/et_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:hint="测试人员姓名"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:maxLength="20"
+                            android:textColor="#0a0b35"
+                            android:textColorHint="#cce3fc"
+                            android:theme="@style/EditTextTheme" />
+
+                        <ImageView
+                            android:id="@+id/iv_delete_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/item_offset_5dp"
+                            android:src="@mipmap/vector_drawable_clear"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/item_offset_4dp"
+                            android:text="输入测试人员姓名"
+                            android:textSize="@dimen/item_offset_12sp" />
+
+                        <TextView
+                            android:id="@+id/tv3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/item_offset_5dp"
+                            android:text="0/20"
+                            android:textSize="@dimen/item_offset_12sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="pin">
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linear_speed_and_angle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#31727272"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/item_offset_8dp"
+                android:paddingTop="@dimen/item_offset_8dp">
+
+                <ImageView
+                    android:id="@+id/iv_speed_and"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/item_offset_15dp"
+                    android:src="@mipmap/rwxx_icon_open_bt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/item_offset_20dp"
+                    android:text="速度与角度"
+                    android:textColor="@color/orange_my"
+                    android:textSize="@dimen/item_offset_24sp" />
+            </LinearLayout>
+
+            <com.example.hu.huproject.Utils.ExpandableLayout
+                android:id="@+id/expand_speed_and_angle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                app:el_duration="500"
+                app:el_expanded="true"
+                app:el_parallax="0.5">
+
+                <TextView
+                    android:id="@+id/tv_speedandangle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/select_creattask"
+                    android:clickable="true"
+                    android:drawableLeft="@mipmap/rwxx_arrow_no"
+                    android:drawablePadding="@dimen/item_offset_20dp"
+                    android:focusable="true"
+                    android:paddingBottom="@dimen/item_offset_13dp"
+                    android:paddingLeft="@dimen/item_offset_25dp"
+                    android:paddingTop="@dimen/item_offset_13dp"
+                    android:text="速度与角度测试"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/item_offset_20sp" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tv_speedandangle"
+                    android:background="@color/lib_black_split_line" />
+
+                <TextView
+                    android:id="@+id/tv_speed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view1"
+                    android:background="@drawable/select_creattask"
+                    android:clickable="true"
+                    android:drawableLeft="@mipmap/rwxx_arrow_no"
+                    android:drawablePadding="@dimen/item_offset_20dp"
+                    android:focusable="true"
+                    android:paddingBottom="@dimen/item_offset_13dp"
+                    android:paddingLeft="@dimen/item_offset_25dp"
+                    android:paddingTop="@dimen/item_offset_13dp"
+                    android:text="速度测试"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/item_offset_20sp" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tv_speed"
+                    android:background="@color/lib_black_split_line" />
+
+                <TextView
+                    android:id="@+id/tv_angle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_speed"
+                    android:background="@drawable/select_creattask"
+                    android:clickable="true"
+                    android:drawableLeft="@mipmap/rwxx_arrow_no"
+                    android:drawablePadding="@dimen/item_offset_20dp"
+                    android:focusable="true"
+                    android:paddingBottom="@dimen/item_offset_13dp"
+                    android:paddingLeft="@dimen/item_offset_25dp"
+                    android:paddingTop="@dimen/item_offset_13dp"
+                    android:text="角度测试"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/item_offset_20sp" />
+
+            </com.example.hu.huproject.Utils.ExpandableLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_zhidong"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#31727272"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/item_offset_8dp"
+                android:paddingTop="@dimen/item_offset_8dp">
+
+                <ImageView
+                    android:id="@+id/iv_zhidong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/item_offset_15dp"
+                    android:src="@mipmap/rwxx_icon_open_bt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/item_offset_20dp"
+                    android:text="制动性能"
+                    android:textColor="@color/orange_my"
+                    android:textSize="@dimen/item_offset_24sp" />
+            </LinearLayout>
+
+            <com.example.hu.huproject.Utils.ExpandableLayout
+                android:id="@+id/expand_zhidong"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                app:el_duration="500"
+                app:el_expanded="true"
+                app:el_parallax="0.5">
+
+                <TextView
+                    android:id="@+id/tv_kongdong_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/select_creattask"
+                    android:clickable="true"
+                    android:drawableLeft="@mipmap/rwxx_arrow_no"
+                    android:drawablePadding="@dimen/item_offset_20dp"
+                    android:focusable="true"
+                    android:paddingBottom="@dimen/item_offset_13dp"
+                    android:paddingLeft="@dimen/item_offset_25dp"
+                    android:paddingTop="@dimen/item_offset_13dp"
+                    android:text="空动时间测试"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/item_offset_20sp" />
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tv_kongdong_time"
+                    android:background="@color/lib_black_split_line" />
+
+                <TextView
+                    android:id="@+id/tv_manzai_xiangxia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view3"
+                    android:background="@drawable/select_creattask"
+                    android:clickable="true"
+                    android:drawableLeft="@mipmap/rwxx_arrow_no"
+                    android:drawablePadding="@dimen/item_offset_20dp"
+                    android:focusable="true"
+                    android:paddingBottom="@dimen/item_offset_13dp"
+                    android:paddingLeft="@dimen/item_offset_25dp"
+                    android:paddingTop="@dimen/item_offset_13dp"
+                    android:text="满载向下制动距离测试"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/item_offset_20sp" />
+
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tv_manzai_xiangxia"
+                    android:background="@color/lib_black_split_line" />
+
+                <TextView
+                    android:id="@+id/tv_kongzai_xiangshang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view4"
+                    android:background="@drawable/select_creattask"
+                    android:clickable="true"
+                    android:drawableLeft="@mipmap/rwxx_arrow_no"
+                    android:drawablePadding="@dimen/item_offset_20dp"
+                    android:focusable="true"
+                    android:paddingBottom="@dimen/item_offset_13dp"
+                    android:paddingLeft="@dimen/item_offset_25dp"
+                    android:paddingTop="@dimen/item_offset_13dp"
+                    android:text="空载向上制动减速度测试"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/item_offset_20sp" />
+
+            </com.example.hu.huproject.Utils.ExpandableLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_system_power"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#31727272"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/item_offset_8dp"
+                android:paddingTop="@dimen/item_offset_8dp">
+
+                <ImageView
+                    android:id="@+id/iv_system_power"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/item_offset_15dp"
+                    android:src="@mipmap/rwxx_icon_open_bt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/item_offset_20dp"
+                    android:text="系统力"
+                    android:textColor="@color/orange_my"
+                    android:textSize="@dimen/item_offset_24sp" />
+            </LinearLayout>
+
+            <com.example.hu.huproject.Utils.ExpandableLayout
+                android:id="@+id/expand_system_power"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                app:el_duration="500"
+                app:el_expanded="true"
+                app:el_parallax="0.5">
+
+                <TextView
+                    android:id="@+id/tv_qianyinli"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/select_creattask"
+                    android:clickable="true"
+                    android:drawableLeft="@mipmap/rwxx_arrow_no"
+                    android:drawablePadding="@dimen/item_offset_20dp"
+                    android:focusable="true"
+                    android:paddingBottom="@dimen/item_offset_13dp"
+                    android:paddingLeft="@dimen/item_offset_25dp"
+                    android:paddingTop="@dimen/item_offset_13dp"
+                    android:text="牵引力测试"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/item_offset_20sp" />
+
+                <View
+                    android:id="@+id/view5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tv_qianyinli"
+                    android:background="@color/lib_black_split_line" />
+
+                <TextView
+                    android:id="@+id/tv_zhidongli"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view5"
+                    android:background="@drawable/select_creattask"
+                    android:clickable="true"
+                    android:drawableLeft="@mipmap/rwxx_arrow_no"
+                    android:drawablePadding="@dimen/item_offset_20dp"
+                    android:focusable="true"
+                    android:paddingBottom="@dimen/item_offset_13dp"
+                    android:paddingLeft="@dimen/item_offset_25dp"
+                    android:paddingTop="@dimen/item_offset_13dp"
+                    android:text="制动力测试"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/item_offset_20sp" />
+
+                <View
+                    android:id="@+id/view6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tv_zhidongli"
+                    android:background="@color/lib_black_split_line" />
+
+                <TextView
+                    android:id="@+id/tv_huishenglun"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view6"
+                    android:background="@drawable/select_creattask"
+                    android:clickable="true"
+                    android:drawableLeft="@mipmap/rwxx_arrow_no"
+                    android:drawablePadding="@dimen/item_offset_20dp"
+                    android:focusable="true"
+                    android:paddingBottom="@dimen/item_offset_13dp"
+                    android:paddingLeft="@dimen/item_offset_25dp"
+                    android:paddingTop="@dimen/item_offset_13dp"
+                    android:text="回绳轮预张力测试"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/item_offset_20sp" />
+
+            </com.example.hu.huproject.Utils.ExpandableLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_search"
+        app:backgroundTint="@color/greenyellow"
+        app:elevation="5dp"
+        app:fabSize="normal"
+        app:layout_anchor="@+id/appbarlayout"
+        app:layout_anchorGravity="bottom|right" />
+
+</android.support.design.widget.CoordinatorLayout>

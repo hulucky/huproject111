@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <com.sensor.view.SensorView
+            android:id="@+id/sv_lali"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/item_offset_120dp"
+            android:layout_marginRight="@dimen/item_offset_120dp"
+            app:CheckConnect="true"
+            app:CheckTime="3000"
+            app:DrawModel="variable"
+            app:SensorType="LA_LI"
+            app:SensorViewPadding="@dimen/item_offset_10dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#082045"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/spacing_normal"
+        android:paddingLeft="@dimen/spacing_normal"
+        android:paddingRight="0dp"
+        android:paddingTop="@dimen/spacing_normal">
+
+        <com.xzkydz.function.view.CustomViewPager
+            android:id="@+id/custom_ViewPager"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_show_test_data" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/item_offset_14dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/item_offset_14dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/btn_start"
+                    android:layout_width="@dimen/item_offset_70dp"
+                    android:layout_height="@dimen/item_offset_40dp"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:background="@mipmap/icon_btn_save_normal"
+                    android:gravity="center"
+                    android:text="开始"
+                    android:textSize="@dimen/item_offset_14sp" />
+
+                <TextView
+                    android:id="@+id/btn_save"
+                    android:layout_width="@dimen/item_offset_70dp"
+                    android:layout_height="@dimen/item_offset_40dp"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:background="@mipmap/icon_btn_save_normal"
+                    android:gravity="center"
+                    android:text="保存"
+                    android:textSize="@dimen/item_offset_14sp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
